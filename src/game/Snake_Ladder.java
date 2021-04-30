@@ -7,9 +7,11 @@ public class Snake_Ladder
 		System.out.println("#####  Welcome to Snake and Ladder Game  #####");
 		System.out.println("\nYou are at Position 0");		
 		int position = 0;
-		
+		int countposition = 0;
+		int countdie = 0;
 		while (position < 100)
 		{
+			countdie++;
 			int dice = (int)(Math.floor((Math.random() * 10 ) % 6) + 1);
 			System.out.println("\nYou Roll: " +dice);
 			
@@ -21,6 +23,7 @@ public class Snake_Ladder
       			case Ladder:
       				System.out.println("Player got Ladder");
       				position = +position + dice;
+      				countposition++;
       				if (+position > 100) {
       					position = +position - dice;
 			        	System.out.println("Now Player is at " +position);}
@@ -35,6 +38,7 @@ public class Snake_Ladder
       				{
       					if (+position > 6) {
       						position -= dice;
+      						countposition++;
       						System.out.println("Player got Snake");
       						System.out.println("Player move behind through snake");
       						System.out.println("Now you are at  " +position);
@@ -46,7 +50,9 @@ public class Snake_Ladder
       					position = 0;
       					System.out.println("Player doesnt move"); break;     			
 			}
+			System.out.println("\n***Player Wins***");
+			System.out.println("\nThe Position of a Player had change " +countposition +" times");
 		}
-		System.out.println("\n***Player Wins***");
+		System.out.println("\nThe Dice was Rolled " +countdie +" times");
 	}
 }
