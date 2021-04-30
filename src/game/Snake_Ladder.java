@@ -5,8 +5,7 @@ public class Snake_Ladder
 	public static void main(String[] args) 
 	{
 		System.out.println("#####  Welcome to Snake and Ladder Game  #####");
-		System.out.println("\nYou are at Position 0");
-		
+		System.out.println("\nYou are at Position 0");		
 		int position = 0;
 		
 		while (position < 100)
