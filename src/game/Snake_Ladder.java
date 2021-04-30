@@ -24,10 +24,10 @@ public class Snake_Ladder
       				position = +position + dice;
       				if (+position > 100) {
       					position = +position - dice;
-			        	System.out.println("Now Player1 is at " +position);}
+			        	System.out.println("Now Player is at " +position);}
       				else {
-      					System.out.println("The player1 move head through Ladder");
-			        	System.out.println("Now Player1 is at " +position);}
+      					System.out.println("The player move head through Ladder");
+			        	System.out.println("Now Player is at " +position);}
       				break;
       			case Snake:
       				if (position == 0 )
@@ -48,5 +48,6 @@ public class Snake_Ladder
       					System.out.println("Player doesnt move"); break;     			
 			}
 		}
+		System.out.println("\n***Player Wins***");
 	}
 }
